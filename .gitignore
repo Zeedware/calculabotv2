@@ -63,3 +63,5 @@ config.toml
 /profile.out
 /coverage.txt
 release/
+
+calculabotv2
