@@ -22,6 +22,9 @@ improvement on the codebase
 * [Go](https://golang.org) - The language for simplicity and concurrency
 * [Viper](https://github.com/spf13/viper) - Go configuration with fangs!
 * [Telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) - basically api for telegram bot
+* [Qwant search engine](https://qwant.com) - search engine
+* [Imroc/req](https://github.com/imroc/req) - request library by Imroc
+* [Testify](https://github.com/stretchr/testify) - Thou Shalt Write Tests
 
 ### Version
 - 0.0.1 - add skeleton for the project. And add early dependencies

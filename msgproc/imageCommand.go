@@ -1,6 +1,7 @@
 package msgproc
 
 import (
+	"calculabotv2/qwantservice"
 	"regexp"
 )
 
@@ -13,5 +14,9 @@ func (imageCommand ImageCommand) IsExecuted(update BotUpdate) bool {
 }
 
 func (imageCommand ImageCommand) Process(update BotUpdate) BotReply {
-	return nil
+	_, image, err := qwantservice.GetImage(update.Message())
+	if err != nil {
+		return NewBotMsgReply("image not found")
+	}
+	return NewBotImgReply(image)
 }
