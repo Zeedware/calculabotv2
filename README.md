@@ -1,5 +1,8 @@
 # Calculabot v2
 
+[![Build Status](https://travis-ci.org/Zeedware/calculabotv2.svg?branch=master)](https://travis-ci.org/Zeedware/calculabotv2)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Zeedware/calculabotv2)](https://goreportcard.com/report/github.com/Zeedware/calculabotv2)
+
 2nd version of the Calculabot telegram bot project.
 
 improvement on the codebase
