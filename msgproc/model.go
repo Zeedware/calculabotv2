@@ -13,17 +13,20 @@ type BotReply interface {
 }
 
 type BotMsgReply struct {
-	msg string
+	update BotUpdate
+	msg    string
 }
 
-func NewBotMsgReply(msg string) BotMsgReply {
-	return BotMsgReply{msg: msg}
+func NewBotMsgReply(update BotUpdate, msg string) BotMsgReply {
+	return BotMsgReply{update: update, msg: msg}
 }
 
 type BotImgReply struct {
-	image []byte
+	update  BotUpdate
+	image   []byte
+	caption string
 }
 
-func NewBotImgReply(image []byte) BotImgReply {
-	return BotImgReply{image: image}
+func NewBotImgReply(update BotUpdate, image []byte, caption string) BotImgReply {
+	return BotImgReply{update: update, image: image, caption: caption}
 }

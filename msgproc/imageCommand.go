@@ -15,9 +15,9 @@ func (imageCommand ImageCommand) IsExecuted(update BotUpdate) bool {
 }
 
 func (imageCommand ImageCommand) Process(update BotUpdate) BotReply {
-	_, image, err := qwantservice.GetImage(strings.Split(update.Message(), "gbr ")[0])
+	title, image, err := qwantservice.GetImage(strings.Split(update.Message(), "gbr ")[0])
 	if err != nil {
-		return NewBotMsgReply("image not found")
+		return NewBotMsgReply(update, "image not found")
 	}
-	return NewBotImgReply(image)
+	return NewBotImgReply(update, image, title)
 }
