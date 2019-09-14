@@ -20,7 +20,7 @@ _test
 _testmain.go
 .idea
 
-config.toml
+/config.toml
 
 !SampleResouces/config.toml
 
