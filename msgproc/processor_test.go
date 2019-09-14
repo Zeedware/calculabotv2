@@ -6,7 +6,7 @@ import (
 )
 
 func TestProcessMessage(t *testing.T) {
-	update := TestUpdate{message: "gbr test"}
+	update := TestUpdate{message: "gbr qwant"}
 	botReplies := ProcessMessage(update)
 	Len(t, botReplies, 1)
 	imgReply, ok := botReplies[0].(BotImgReply)
