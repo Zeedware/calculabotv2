@@ -10,18 +10,19 @@ type ImageCommand struct {
 }
 
 func (imageCommand ImageCommand) IsExecuted(update BotUpdate) bool {
-	regex := regexp.MustCompile("\\Agbr [[:word:]]+")
+	regex := regexp.MustCompile("(?i)\\Agbr [[:word:]]+")
 	return regex.MatchString(update.Message())
 }
 
 func (imageCommand ImageCommand) Process(update BotUpdate) BotReply {
-	title, image, err := qwantservice.GetImage(getCommandArguments(update.Message()))
+	imageName := getCommandArguments(update.Message())
+	_, image, err := qwantservice.GetImage(imageName)
 	if err != nil {
 		return NewBotMsgReply(update, "image not found")
 	}
-	return NewBotImgReply(update, image, title)
+	return NewBotImgReply(update, image, imageName)
 }
 
 func getCommandArguments(input string) string {
-	return strings.Split(input, "gbr ")[1]
+	return strings.Split(strings.ToLower(input), "gbr ")[1]
 }
