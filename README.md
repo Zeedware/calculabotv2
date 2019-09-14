@@ -28,6 +28,7 @@ improvement on the codebase
 * [Qwant search engine](https://qwant.com) - search engine
 * [Imroc/req](https://github.com/imroc/req) - request library by Imroc
 * [Testify](https://github.com/stretchr/testify) - Thou Shalt Write Tests
+* [Go-funk](https://github.com/thoas/go-funk) - Modern go library
 
 ### Version
 - 0.0.1 - add skeleton for the project. And add early dependencies

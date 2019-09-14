@@ -8,4 +8,5 @@ require (
 	github.com/spf13/viper v1.4.0
 	github.com/stretchr/testify v1.2.2
 	github.com/technoweenie/multipartstreamer v1.0.1 // indirect
+	github.com/thoas/go-funk v0.4.0
 )
