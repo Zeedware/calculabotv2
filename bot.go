@@ -62,7 +62,9 @@ func (bot *Bot) sendTelegram(reply msgproc.BotReply) {
 		msg = bot.sendImgReply(reply.(msgproc.BotImgReply), tgUpdate)
 	}
 	_, err := bot.TelegramBot.Send(msg)
-	log.Println(err)
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 func (bot *Bot) sendImgReply(reply msgproc.BotImgReply, tgUpdate TelegramUpdate) tgbotapi.Chattable {
